@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.country-property {
+    @apply font-[600];
+}
+
+.country-value {
+    @apply text-dark_gray;
+}
