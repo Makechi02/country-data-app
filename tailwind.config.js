@@ -11,9 +11,6 @@ export default {
 				dark_gray: "hsl(0, 0%, 52%)",
 				dark_blue: "hsl(200, 15%, 8%)"
 			},
-			fontFamily: {
-				nunito_sans: ['var(--font-nunito-sans)'],
-			},
 			gridTemplateColumns: {
 				countries_cols: "repeat(auto-fill, minmax(250px, 1fr))",
 				border_cols: "repeat(auto-fill, minmax(100px, 1fr))"

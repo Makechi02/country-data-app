@@ -1,12 +1,16 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 import {CountryDetails, Header, Home} from "./components";
+import {useTheme} from "./context/ThemeContext.jsx";
 
 function App() {
+
+	const {theme} = useTheme();
+
 	return (
 		<>
 			<Header/>
-			<main>
+			<main className={`bg-${theme} min-h-[calc(100svh-70px)]`}>
 				<BrowserRouter>
 					<Routes>
 						<Route path={`/`} element={<Home/>} />

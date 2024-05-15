@@ -5,6 +5,7 @@ import PageHeader from "./PageHeader.jsx";
 import useDebounce from "../hooks/useDebounce.js";
 
 import countries from "../data/data.json";
+import {useTheme} from "../context/ThemeContext.jsx";
 
 const Home = () => {
 
@@ -27,7 +28,7 @@ const Home = () => {
 
 	return (
 		<div>
-			<div className={`py-6 px-[5%] bg-light_gray text-dark_blue text-[14px]`}>
+			<div className={`py-6 px-[5%] text-dark_blue text-[14px]`}>
 				<PageHeader regions={regions} setSearchTerm={setSearchTerm} handleFilter={handleFilter}/>
 				<CountriesGrid countries={filteredCountries}/>
 			</div>
@@ -46,8 +47,10 @@ const CountriesGrid = ({countries}) => {
 }
 
 const Country = ({country}) => {
+	const {theme} = useTheme();
+
 	return (
-		<div className={`bg-white rounded-md overflow-hidden shadow-md`}>
+		<div className={`rounded-md overflow-hidden shadow-md elem-${theme}`}>
 			<div className={`h-[150px]`}>
 				<img src={country.flags.svg} alt={`${country.name}'s flag`} className={`h-full w-full object-cover`}/>
 			</div>

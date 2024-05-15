@@ -8,6 +8,22 @@
 	font-family: "Nunito Sans", sans-serif;
 }
 
+.bg-dark {
+	@apply bg-[hsl(207,26%,17%)] text-white;
+}
+
+.light-bg {
+	@apply bg-[hsl(0,0%,52%)] text-[hsl(200,15%,8%)];
+}
+
+.elem-dark {
+	@apply bg-[hsl(209,23%,22%)] text-white;
+}
+
+.elem-light {
+	@apply bg-white text-[hsl(200,15%,8%)];
+}
+
 .country-property {
 	@apply font-[600];
 }

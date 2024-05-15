@@ -1,6 +1,7 @@
 import {Link, useParams} from "react-router-dom";
 import countries from "../data/data.json";
 import {FaArrowLeftLong} from "react-icons/fa6";
+import {useTheme} from "../context/ThemeContext.jsx";
 
 const CountryDetails = () => {
 
@@ -11,9 +12,11 @@ const CountryDetails = () => {
 	const currencies = country?.currencies?.map(currency => currency.name).join(", ");
 	const borderCountries = country?.borders?.map(border => countries.filter(country => country.alpha3Code === border)[0]);
 
+	const {theme} = useTheme();
+
 	return (
-		<div className={`py-8 px-8 sm:px-[7%] bg-light_gray text-dark_blue`}>
-			<Link to={`/`} className={`flex items-center gap-2 bg-white w-fit shadow-md p-2 rounded-md`}>
+		<div className={`py-8 px-8 sm:px-[7%] bg-${theme}`}>
+			<Link to={`/`} className={`flex items-center gap-2 w-fit shadow-md py-2 px-6 rounded-md elem-${theme}`}>
 				<FaArrowLeftLong/>
 				Back
 			</Link>
@@ -71,7 +74,7 @@ const CountryDetails = () => {
 								<Link
 									key={index}
 									to={`/country/${border.alpha3Code}`}
-									className={`border-2 rounded-md text-center flex items-center justify-center p-1 text-dark_gray text-[14px]`}
+									className={`${theme === 'light' && 'border-2'} rounded-md text-center flex items-center justify-center p-1 text-dark_gray text-[14px] elem-${theme}`}
 								>
 									{border.name}
 								</Link>
