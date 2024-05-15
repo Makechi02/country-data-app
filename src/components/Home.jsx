@@ -1,14 +1,13 @@
-"use client"
-
-import Link from "next/link";
+import {Link} from "react-router-dom";
 import {useState} from "react";
 
-import PageHeader from "@/app/(components)/PageHeader";
-import useDebounce from "@/hooks/useDebounce";
+import PageHeader from "./PageHeader.jsx";
+import useDebounce from "../hooks/useDebounce.js";
 
-import countries from '@/data/data.json';
+import countries from "../data/data.json";
 
 const Home = () => {
+
 	const regions = [...new Set(countries.map(country => country.region))];
 
 	const [searchTerm, setSearchTerm] = useState('');
@@ -27,9 +26,11 @@ const Home = () => {
 	useDebounce(handleSearch, 1000, [searchTerm]);
 
 	return (
-		<div className={`py-6 px-[5%] bg-light_gray text-dark_blue text-[14px]`}>
-			<PageHeader regions={regions} setSearchTerm={setSearchTerm} handleFilter={handleFilter}/>
-			<CountriesGrid countries={filteredCountries}/>
+		<div>
+			<div className={`py-6 px-[5%] bg-light_gray text-dark_blue text-[14px]`}>
+				<PageHeader regions={regions} setSearchTerm={setSearchTerm} handleFilter={handleFilter}/>
+				<CountriesGrid countries={filteredCountries}/>
+			</div>
 		</div>
 	)
 }
@@ -51,7 +52,7 @@ const Country = ({country}) => {
 				<img src={country.flags.svg} alt={`${country.name}'s flag`} className={`h-full w-full object-cover`}/>
 			</div>
 			<div className={`px-4 pt-6 pb-8`}>
-				<Link href={`/country/${country.alpha3Code}`} className={`font-[800] text-lg`}>{country.name}</Link>
+				<Link to={`/country/${country.alpha3Code}`} className={`font-[800] text-lg`}>{country.name}</Link>
 				<div className={`mt-4`}>
 					<p>
 						<span className={`country-property`}>Population: </span>

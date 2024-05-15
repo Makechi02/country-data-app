@@ -15,6 +15,7 @@ Frontend Mentor challenges help you improve your coding skills by building reali
     - [What I learned](#what-i-learned)
     - [Continued development](#continued-development)
 - [Author](#author)
+- [Acknowledgements](#acknowledgments)
 
 ## Overview
 
@@ -44,7 +45,7 @@ Mobile light version
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [REST Countries API app](https://country-data-app-sand.vercel.app)
 
 ## My process
 
@@ -56,11 +57,11 @@ Mobile light version
 - CSS Grid
 - Mobile-first workflow
 - [Tailwind CSS](https://tailwindcss.com) - CSS Framework
-- [Next.js](https://nextjs.org/) - React framework
+- [REACT JS](https://react.dev) - JS library
 
 ### What I learned
 
-During this project, I learned how to integrate APIs into a Next.JS application and implement dynamic theming with
+During this project, I learned how to integrate APIs into a React application and implement dynamic theming with
 Tailwind CSS.
 
 ### Continued development
@@ -76,3 +77,8 @@ Tailwind CSS.
 - Frontend Mentor - [@Makechi02](https://www.frontendmentor.io/profile/Makechi02)
 - Twitter - [@OEMakbe](https://www.twitter.com/OEMakbe)
 - Instagram - [@oemakbe](https://www.instagram.com/oemakbe)
+
+## Acknowledgments
+
+I would like to thank Frontend Mentor for providing this challenge and the REST Countries API for providing the data
+used in this project.
